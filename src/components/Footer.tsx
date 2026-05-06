@@ -1,48 +1,21 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="bg-[#0A0A0A] py-10">
+    <footer className="bg-[#0A0A0A] dark:bg-[#080808] py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <div className="flex items-center gap-0 select-none">
-            <span
-              style={{
-                fontFamily: "var(--font-barlow-condensed), sans-serif",
-                fontWeight: 900,
-                fontSize: "1.5rem",
-                color: "white",
-                letterSpacing: "0.02em",
-              }}
-            >
-              S
-            </span>
-            <span
-              style={{
-                fontFamily: "var(--font-barlow-condensed), sans-serif",
-                fontWeight: 900,
-                fontSize: "1.1rem",
-                color: "#2DD4BF",
-                margin: "0 1px",
-              }}
-            >
-              —►
-            </span>
-            <span
-              style={{
-                fontFamily: "var(--font-barlow-condensed), sans-serif",
-                fontWeight: 900,
-                fontSize: "1.5rem",
-                color: "white",
-                letterSpacing: "0.02em",
-              }}
-            >
-              AJAH
-            </span>
-          </div>
+          <Image
+            src="/Logo-34.png"
+            alt="SeaJah"
+            height={26}
+            width={104}
+            className="invert"
+          />
 
           {/* Tagline */}
           <p

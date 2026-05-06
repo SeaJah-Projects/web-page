@@ -25,7 +25,7 @@ export default function Expertise() {
   ];
 
   return (
-    <section id="expertise" className="py-24 bg-[#0A0A0A]">
+    <section id="expertise" className="py-24 bg-[#0A0A0A] dark:bg-[#080808]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

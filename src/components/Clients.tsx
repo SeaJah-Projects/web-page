@@ -9,7 +9,7 @@ export default function Clients() {
   const t = useTranslations("clients");
 
   return (
-    <section id="clients" className="py-24 bg-white">
+    <section id="clients" className="py-24 bg-white dark:bg-[#111111]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,7 +19,7 @@ export default function Clients() {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl font-black text-[#0A0A0A] mb-4"
+            className="text-4xl md:text-5xl font-black text-[#0A0A0A] dark:text-[#FAFAFA] mb-4"
             style={{ fontFamily: "var(--font-barlow-condensed), sans-serif", fontWeight: 900 }}
           >
             {t("title")}
@@ -35,10 +35,10 @@ export default function Clients() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.4 }}
-              className="group px-8 py-5 rounded-xl border border-gray-100 bg-[#FAFAFA] hover:border-[#2DD4BF] hover:bg-[#F0FDFA] transition-all duration-300 min-w-[140px] text-center"
+              className="group px-8 py-5 rounded-xl border border-gray-100 dark:border-[#262626] bg-[#FAFAFA] dark:bg-[#141414] hover:border-[#2DD4BF] hover:bg-[#F0FDFA] dark:hover:bg-[#042f2e] transition-all duration-300 min-w-[140px] text-center"
             >
               <span
-                className="text-xl font-black text-gray-400 group-hover:text-[#0A0A0A] transition-colors duration-300"
+                className="text-xl font-black text-gray-400 group-hover:text-[#0A0A0A] dark:group-hover:text-[#FAFAFA] transition-colors duration-300"
                 style={{ fontFamily: "var(--font-barlow-condensed), sans-serif", fontWeight: 800, letterSpacing: "0.05em" }}
               >
                 {client}

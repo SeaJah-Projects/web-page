@@ -4,6 +4,8 @@ import { useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import ThemeToggle from "./ThemeToggle";
 
 const LOCALES = [
   { code: "es", label: "ES" },
@@ -59,47 +61,23 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-[#FAFAFA] transition-shadow duration-300 ${
-        scrolled ? "shadow-sm border-b border-gray-100" : "border-b border-gray-100"
+      className={`fixed top-0 left-0 right-0 z-50 bg-[#FAFAFA] dark:bg-[#0A0A0A] transition-shadow duration-300 ${
+        scrolled
+          ? "shadow-sm border-b border-gray-100 dark:border-[#262626]"
+          : "border-b border-gray-100 dark:border-[#262626]"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-0 select-none">
-          <span
-            style={{
-              fontFamily: "var(--font-barlow-condensed), sans-serif",
-              fontWeight: 900,
-              fontSize: "1.6rem",
-              color: "#0A0A0A",
-              letterSpacing: "0.02em",
-            }}
-          >
-            S
-          </span>
-          <span
-            style={{
-              fontFamily: "var(--font-barlow-condensed), sans-serif",
-              fontWeight: 900,
-              fontSize: "1.2rem",
-              color: "#2DD4BF",
-              margin: "0 1px",
-              letterSpacing: "-0.05em",
-            }}
-          >
-            —►
-          </span>
-          <span
-            style={{
-              fontFamily: "var(--font-barlow-condensed), sans-serif",
-              fontWeight: 900,
-              fontSize: "1.6rem",
-              color: "#0A0A0A",
-              letterSpacing: "0.02em",
-            }}
-          >
-            AJAH
-          </span>
+        <a href="#" className="flex items-center select-none">
+          <Image
+            src="/Logo-34.png"
+            alt="SeaJah"
+            height={28}
+            width={112}
+            className="dark:invert"
+            priority
+          />
         </a>
 
         {/* Desktop Nav */}
@@ -108,7 +86,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-gray-600 hover:text-[#0A0A0A] transition-colors"
+              className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-[#0A0A0A] dark:hover:text-white transition-colors"
               style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
             >
               {link.label}
@@ -124,18 +102,20 @@ export default function Navbar() {
                   className={`text-xs font-semibold px-1 py-0.5 rounded transition-colors ${
                     currentLocale === loc.code
                       ? "text-[#2DD4BF]"
-                      : "text-gray-400 hover:text-gray-700"
+                      : "text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
                   }`}
                   style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
                 >
                   {loc.label}
                 </button>
                 {i < LOCALES.length - 1 && (
-                  <span className="text-gray-200 text-xs">|</span>
+                  <span className="text-gray-200 dark:text-gray-700 text-xs">|</span>
                 )}
               </span>
             ))}
           </div>
+
+          <ThemeToggle />
 
           <a
             href="#contact"
@@ -147,29 +127,32 @@ export default function Navbar() {
         </div>
 
         {/* Mobile menu button */}
-        <button
-          className="md:hidden p-2 text-gray-600"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Menu"
-        >
-          {mobileOpen ? (
-            <XMarkIcon className="w-6 h-6" />
-          ) : (
-            <Bars3Icon className="w-6 h-6" />
-          )}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            className="p-2 text-gray-600 dark:text-gray-400"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Menu"
+          >
+            {mobileOpen ? (
+              <XMarkIcon className="w-6 h-6" />
+            ) : (
+              <Bars3Icon className="w-6 h-6" />
+            )}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#FAFAFA] border-t border-gray-100 px-4 pb-4">
+        <div className="md:hidden bg-[#FAFAFA] dark:bg-[#0A0A0A] border-t border-gray-100 dark:border-[#262626] px-4 pb-4">
           <div className="flex flex-col gap-3 pt-3">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-sm font-medium text-gray-600 hover:text-[#0A0A0A] py-1"
+                className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-[#0A0A0A] dark:hover:text-white py-1"
                 style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
               >
                 {link.label}
@@ -186,7 +169,7 @@ export default function Navbar() {
                   className={`text-xs font-semibold px-2 py-1 rounded border ${
                     currentLocale === loc.code
                       ? "border-[#2DD4BF] text-[#2DD4BF]"
-                      : "border-gray-200 text-gray-400"
+                      : "border-gray-200 dark:border-[#262626] text-gray-400"
                   }`}
                 >
                   {loc.label}

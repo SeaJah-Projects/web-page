@@ -43,7 +43,7 @@ export default function Services() {
   const t = useTranslations("services");
 
   return (
-    <section id="services" className="py-24 bg-[#FAFAFA]">
+    <section id="services" className="py-24 bg-[#FAFAFA] dark:bg-[#0A0A0A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ export default function Services() {
           className="text-center mb-16"
         >
           <h2
-            className="text-4xl md:text-5xl font-black text-[#0A0A0A] mb-4"
+            className="text-4xl md:text-5xl font-black text-[#0A0A0A] dark:text-[#FAFAFA] mb-4"
             style={{ fontFamily: "var(--font-barlow-condensed), sans-serif", fontWeight: 900 }}
           >
             {t("title")}
@@ -74,7 +74,7 @@ export default function Services() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className={`relative group bg-white rounded-xl p-6 border border-gray-100 border-b-4 hover:shadow-xl transition-all duration-300 ${
+                className={`relative group bg-white dark:bg-[#141414] rounded-xl p-6 border border-gray-100 dark:border-[#262626] border-b-4 hover:shadow-xl transition-all duration-300 ${
                   isAI ? "border-b-[#2DD4BF]" : "hover:border-b-[#2DD4BF]"
                 }`}
                 style={isAI ? { boxShadow: "0 0 0 1px #2DD4BF20" } : undefined}
@@ -84,17 +84,17 @@ export default function Services() {
                     {t("ai.badge")}
                   </span>
                 )}
-                <div className="w-12 h-12 rounded-lg bg-[#F0FDFA] flex items-center justify-center mb-4 group-hover:bg-[#2DD4BF] transition-colors duration-300">
+                <div className="w-12 h-12 rounded-lg bg-[#F0FDFA] dark:bg-[#042f2e] flex items-center justify-center mb-4 group-hover:bg-[#2DD4BF] transition-colors duration-300">
                   <Icon className="w-6 h-6 text-[#2DD4BF] group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3
-                  className="text-xl font-bold text-[#0A0A0A] mb-2"
+                  className="text-xl font-bold text-[#0A0A0A] dark:text-[#FAFAFA] mb-2"
                   style={{ fontFamily: "var(--font-barlow-condensed), sans-serif", fontWeight: 700, fontSize: "1.2rem" }}
                 >
                   {t(`${key}.title`)}
                 </h3>
                 <p
-                  className="text-gray-500 text-sm leading-relaxed"
+                  className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed"
                   style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
                 >
                   {t(`${key}.desc`)}

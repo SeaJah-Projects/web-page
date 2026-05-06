@@ -7,7 +7,7 @@ export default function Hero() {
   const t = useTranslations("hero");
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#FAFAFA] pt-16">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#FAFAFA] dark:bg-[#0A0A0A] pt-16">
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Large teal blob top-right */}
@@ -27,7 +27,7 @@ export default function Hero() {
         >
           <defs>
             <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#0A0A0A" strokeWidth="1" />
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="1" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
@@ -55,16 +55,15 @@ export default function Hero() {
                 fontWeight: 800,
                 fontSize: "clamp(2.5rem, 5vw, 4rem)",
                 lineHeight: 1.05,
-                color: "#0A0A0A",
                 letterSpacing: "-0.01em",
               }}
-              className="mb-6"
+              className="mb-6 text-[#0A0A0A] dark:text-[#FAFAFA]"
             >
               {t("headline")}
             </h1>
 
             <p
-              className="text-lg text-gray-500 mb-10 max-w-lg"
+              className="text-lg text-gray-500 dark:text-gray-400 mb-10 max-w-lg"
               style={{ fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.7 }}
             >
               {t("subtext")}
@@ -80,7 +79,7 @@ export default function Hero() {
               </a>
               <a
                 href="#services"
-                className="px-6 py-3 rounded-lg font-semibold text-[#0A0A0A] border-2 border-[#0A0A0A] hover:bg-[#0A0A0A] hover:text-white transition-all duration-200"
+                className="px-6 py-3 rounded-lg font-semibold text-[#0A0A0A] dark:text-[#FAFAFA] border-2 border-[#0A0A0A] dark:border-[#FAFAFA] hover:bg-[#0A0A0A] hover:text-white dark:hover:bg-[#FAFAFA] dark:hover:text-[#0A0A0A] transition-all duration-200"
                 style={{ fontFamily: "var(--font-dm-sans)" }}
               >
                 {t("ctaSecondary")}
@@ -148,7 +147,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: chip.delay, duration: 0.5 }}
-                  className="absolute px-3 py-1.5 rounded-full bg-white shadow-md border border-gray-100 text-xs font-semibold text-gray-700"
+                  className="absolute px-3 py-1.5 rounded-full bg-white dark:bg-[#141414] shadow-md border border-gray-100 dark:border-[#262626] text-xs font-semibold text-gray-700 dark:text-gray-300"
                   style={{
                     top: chip.top,
                     left: chip.left,
