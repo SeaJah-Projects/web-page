@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "services": "Services",
+    "howWeWork": "How We Work",
+    "expertise": "Expertise",
+    "clients": "Clients",
+    "about": "About",
+    "contact": "Let's Talk"
+  },
+  "hero": {
+    "badge": "AI FIRST",
+    "headline": "We build world-class software & scale your team with senior talent.",
+    "subtext": "From staff augmentation to full project delivery — we adapt to you.",
+    "ctaPrimary": "Let's Talk",
+    "ctaSecondary": "Our Services"
+  },
+  "stats": {
+    "projects": "+50 Projects Delivered",
+    "hours": "+10k Development Hours",
+    "countries": "+5 Countries",
+    "support": "24/7 Support",
+    "coffee": "+5k Cups of Coffee"
+  },
+  "services": {
+    "title": "Our Services",
+    "softwareDev": {
+      "title": "Software Development",
+      "desc": "We build scalable, high-quality software tailored to your business needs, from MVPs to enterprise platforms."
+    },
+    "staffAug": {
+      "title": "Staff Augmentation",
+      "desc": "We provide senior engineers, designers, and scrum masters that integrate seamlessly into your team."
+    },
+    "uxui": {
+      "title": "UX/UI Design",
+      "desc": "We transform ideas into intuitive, pixel-perfect interfaces that users love."
+    },
+    "consulting": {
+      "title": "Consulting",
+      "desc": "Strategic tech consulting for businesses of every size — we help you make the right decisions at every stage."
+    },
+    "recruitment": {
+      "title": "IT Recruitment",
+      "desc": "We source and place top-tier tech talent quickly, tailored to your specific requirements."
+    },
+    "ai": {
+      "title": "AI Consulting",
+      "desc": "We help businesses unlock the real value of AI — from strategy and LLM integration to full AI-powered product development.",
+      "badge": "NEW"
+    }
+  },
+  "aiSection": {
+    "title": "AI First. Always.",
+    "subtitle": "We don't bolt AI on at the end. We architect for it from day one.",
+    "strategy": {
+      "title": "AI Strategy & Roadmap",
+      "desc": "We help you identify where AI creates real value in your business — no hype, just ROI."
+    },
+    "llm": {
+      "title": "LLM Integration",
+      "desc": "We integrate models like GPT-4, Claude, and Gemini into your existing products and workflows."
+    },
+    "product": {
+      "title": "AI-Powered Product Development",
+      "desc": "We build SaaS products with AI at the core — from idea to production."
+    },
+    "automation": {
+      "title": "Process Automation with AI",
+      "desc": "We replace manual, repetitive processes with intelligent AI agents that work 24/7."
+    }
+  },
+  "howWeWork": {
+    "title": "How We Work",
+    "fixed": {
+      "title": "Fixed Price",
+      "desc": "All requirements, timelines, scope, and costs defined upfront. Predictable, reliable, zero surprises."
+    },
+    "timeAndMaterial": {
+      "title": "Time & Material",
+      "desc": "Flexible budget based on time spent. Fixed hourly rate, variable hours — ideal for evolving projects."
+    }
+  },
+  "expertise": {
+    "title": "Our Expertise",
+    "frontend": {
+      "title": "Front-End",
+      "items": ["HTML", "CSS", "JavaScript", "React.js", "React Native", "Angular", "Vue.js"]
+    },
+    "backend": {
+      "title": "Back-End",
+      "items": ["JavaScript", "Node.js", "Java", "Spring Boot", "Kotlin", ".Net", "Python", "Ruby on Rails", "Apache Kafka"]
+    },
+    "cloud": {
+      "title": "Cloud & AI",
+      "items": ["AWS", "Microsoft Azure", "Google Cloud", "OpenAI API", "Anthropic Claude API", "LangChain", "HuggingFace"]
+    }
+  },
+  "whySeajah": {
+    "title": "Why SeaJah?",
+    "experience": {
+      "title": "We Have Experience",
+      "desc": "Multidisciplinary team with collaborative knowledge and experience with top clients."
+    },
+    "agile": {
+      "title": "Agile Culture",
+      "desc": "Our teams are trained in agile methodologies to consistently meet delivery expectations."
+    },
+    "adaptability": {
+      "title": "Adaptability",
+      "desc": "Simple billing, flexible time bands, easy onboarding. We adapt to you, not the other way around."
+    },
+    "monitoring": {
+      "title": "Monitoring & Training",
+      "desc": "Personal and professional follow-up at every stage. We're partners, not vendors."
+    }
+  },
+  "clients": {
+    "title": "Our Clients"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "t1": {
+      "quote": "With SeaJah's engineering teams, we streamlined the development of our new app significantly.",
+      "author": "CTO at Lagom"
+    },
+    "t2": {
+      "quote": "They always go the extra mile. Everything within their power for the success of the project.",
+      "author": "VP Engineering at iutrace"
+    },
+    "t3": {
+      "quote": "Their work automated our processes, allowing us to save substantially on operating costs.",
+      "author": "Product Lead at Trick"
+    }
+  },
+  "cta": {
+    "headline": "Ready to build something great?",
+    "button": "Let's Talk"
+  },
+  "contact": {
+    "title": "Let's Talk",
+    "email": "hello@seajah.com",
+    "linkedin": "linkedin.com/company/seajah",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Work email",
+    "companyPlaceholder": "Company (optional)",
+    "servicePlaceholder": "Service of interest",
+    "messagePlaceholder": "Tell us about your project...",
+    "submit": "Send Message",
+    "success": "Message sent! We'll be in touch soon.",
+    "services": {
+      "staffAug": "Staff Augmentation",
+      "softwareDev": "Software Development",
+      "uxui": "UX/UI Design",
+      "ai": "AI Consulting",
+      "consulting": "Consulting",
+      "recruitment": "IT Recruitment",
+      "other": "Other"
+    }
+  },
+  "footer": {
+    "tagline": "Fast. But not rushed.",
+    "copyright": "© 2025 SeaJah. All rights reserved."
+  }
+}

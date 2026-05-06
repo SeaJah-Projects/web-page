@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "howWeWork": "Cómo Trabajamos",
+    "expertise": "Expertise",
+    "clients": "Clientes",
+    "about": "Nosotros",
+    "contact": "Hablemos"
+  },
+  "hero": {
+    "badge": "AI FIRST",
+    "headline": "Construimos software de clase mundial y escalamos tu equipo con talento senior.",
+    "subtext": "Desde staff augmentation hasta entrega completa de proyectos — nos adaptamos a vos.",
+    "ctaPrimary": "Hablemos",
+    "ctaSecondary": "Nuestros Servicios"
+  },
+  "stats": {
+    "projects": "+50 Proyectos Entregados",
+    "hours": "+10k Horas de Desarrollo",
+    "countries": "+5 Países",
+    "support": "Soporte 24/7",
+    "coffee": "+5k Tazas de Café"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "softwareDev": {
+      "title": "Desarrollo de Software",
+      "desc": "Construimos software escalable y de alta calidad adaptado a las necesidades de tu negocio, desde MVPs hasta plataformas enterprise."
+    },
+    "staffAug": {
+      "title": "Staff Augmentation",
+      "desc": "Proveemos ingenieros senior, diseñadores y scrum masters que se integran perfectamente a tu equipo."
+    },
+    "uxui": {
+      "title": "Diseño UX/UI",
+      "desc": "Transformamos ideas en interfaces intuitivas y pixel-perfect que los usuarios aman."
+    },
+    "consulting": {
+      "title": "Consultoría",
+      "desc": "Consultoría tecnológica estratégica para empresas de todo tamaño — te ayudamos a tomar las decisiones correctas en cada etapa."
+    },
+    "recruitment": {
+      "title": "Reclutamiento IT",
+      "desc": "Encontramos y colocamos talento tecnológico de primer nivel rápidamente, adaptado a tus requerimientos específicos."
+    },
+    "ai": {
+      "title": "Consultoría de IA",
+      "desc": "Ayudamos a las empresas a desbloquear el valor real de la IA — desde estrategia e integración de LLMs hasta desarrollo completo de productos con IA.",
+      "badge": "NUEVO"
+    }
+  },
+  "aiSection": {
+    "title": "AI First. Siempre.",
+    "subtitle": "No agregamos IA al final. La arquitectamos desde el día uno.",
+    "strategy": {
+      "title": "Estrategia e Hoja de Ruta de IA",
+      "desc": "Te ayudamos a identificar dónde la IA genera valor real en tu negocio — sin hype, solo ROI."
+    },
+    "llm": {
+      "title": "Integración de LLMs",
+      "desc": "Integramos modelos como GPT-4, Claude y Gemini en tus productos y flujos de trabajo existentes."
+    },
+    "product": {
+      "title": "Desarrollo de Productos con IA",
+      "desc": "Construimos productos SaaS con IA en el núcleo — desde la idea hasta producción."
+    },
+    "automation": {
+      "title": "Automatización de Procesos con IA",
+      "desc": "Reemplazamos procesos manuales y repetitivos con agentes de IA inteligentes que trabajan 24/7."
+    }
+  },
+  "howWeWork": {
+    "title": "Cómo Trabajamos",
+    "fixed": {
+      "title": "Precio Fijo",
+      "desc": "Todos los requerimientos, plazos, alcance y costos definidos de antemano. Predecible, confiable, sin sorpresas."
+    },
+    "timeAndMaterial": {
+      "title": "Tiempo y Material",
+      "desc": "Presupuesto flexible basado en el tiempo invertido. Tarifa horaria fija, horas variables — ideal para proyectos en evolución."
+    }
+  },
+  "expertise": {
+    "title": "Nuestro Expertise",
+    "frontend": {
+      "title": "Front-End",
+      "items": ["HTML", "CSS", "JavaScript", "React.js", "React Native", "Angular", "Vue.js"]
+    },
+    "backend": {
+      "title": "Back-End",
+      "items": ["JavaScript", "Node.js", "Java", "Spring Boot", "Kotlin", ".Net", "Python", "Ruby on Rails", "Apache Kafka"]
+    },
+    "cloud": {
+      "title": "Cloud & IA",
+      "items": ["AWS", "Microsoft Azure", "Google Cloud", "OpenAI API", "Anthropic Claude API", "LangChain", "HuggingFace"]
+    }
+  },
+  "whySeajah": {
+    "title": "¿Por qué SeaJah?",
+    "experience": {
+      "title": "Tenemos Experiencia",
+      "desc": "Equipo multidisciplinario con conocimiento colaborativo y experiencia con clientes top."
+    },
+    "agile": {
+      "title": "Cultura Ágil",
+      "desc": "Nuestros equipos están capacitados en metodologías ágiles para cumplir consistentemente con las expectativas de entrega."
+    },
+    "adaptability": {
+      "title": "Adaptabilidad",
+      "desc": "Facturación simple, bandas horarias flexibles, onboarding fácil. Nos adaptamos a vos, no al revés."
+    },
+    "monitoring": {
+      "title": "Seguimiento y Capacitación",
+      "desc": "Seguimiento personal y profesional en cada etapa. Somos socios, no proveedores."
+    }
+  },
+  "clients": {
+    "title": "Nuestros Clientes"
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen Nuestros Clientes",
+    "t1": {
+      "quote": "Con los equipos de ingeniería de SeaJah, agilizamos significativamente el desarrollo de nuestra nueva app.",
+      "author": "CTO en Lagom"
+    },
+    "t2": {
+      "quote": "Siempre van un paso más allá. Todo dentro de sus posibilidades para el éxito del proyecto.",
+      "author": "VP de Ingeniería en iutrace"
+    },
+    "t3": {
+      "quote": "Su trabajo automatizó nuestros procesos, permitiéndonos ahorrar sustancialmente en costos operativos.",
+      "author": "Product Lead en Trick"
+    }
+  },
+  "cta": {
+    "headline": "¿Listo para construir algo grande?",
+    "button": "Hablemos"
+  },
+  "contact": {
+    "title": "Hablemos",
+    "email": "hello@seajah.com",
+    "linkedin": "linkedin.com/company/seajah",
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "Email de trabajo",
+    "companyPlaceholder": "Empresa (opcional)",
+    "servicePlaceholder": "Servicio de interés",
+    "messagePlaceholder": "Contanos sobre tu proyecto...",
+    "submit": "Enviar Mensaje",
+    "success": "¡Mensaje enviado! Te contactaremos pronto.",
+    "services": {
+      "staffAug": "Staff Augmentation",
+      "softwareDev": "Desarrollo de Software",
+      "uxui": "Diseño UX/UI",
+      "ai": "Consultoría de IA",
+      "consulting": "Consultoría",
+      "recruitment": "Reclutamiento IT",
+      "other": "Otro"
+    }
+  },
+  "footer": {
+    "tagline": "Rápido. Pero no apurado.",
+    "copyright": "© 2025 SeaJah. Todos los derechos reservados."
+  }
+}
