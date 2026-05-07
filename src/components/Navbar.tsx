@@ -68,11 +68,20 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#" className="flex items-center select-none">
           <Image
-            src="/LOGO_FULL.png"
+            src="/Logo-34-Photoroom.png"
             alt="SeaJah"
-            height={36}
-            width={190}
+            height={32}
+            width={160}
             priority
+            className="dark:hidden"
+          />
+          <Image
+            src="/Seajah black-Photoroom.png"
+            alt="SeaJah"
+            height={32}
+            width={160}
+            priority
+            className="hidden dark:block"
           />
         </a>
 
