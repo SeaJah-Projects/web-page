@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
@@ -14,29 +14,19 @@ const LOCALES = [
 ];
 
 function getLocalePath(pathname: string, newLocale: string) {
-  // Remove current locale prefix if present
   const segments = pathname.split("/").filter(Boolean);
-  const currentLocale = segments[0];
-  const hasLocalePrefix = ["en", "pt"].includes(currentLocale);
-
-  if (hasLocalePrefix) {
-    segments.shift();
-  }
-
-  if (newLocale === "es") {
-    return "/" + segments.join("/");
-  }
+  const hasLocalePrefix = ["en", "pt"].includes(segments[0]);
+  if (hasLocalePrefix) segments.shift();
+  if (newLocale === "es") return "/" + segments.join("/");
   return "/" + newLocale + (segments.length ? "/" + segments.join("/") : "");
 }
 
 export default function Navbar() {
   const t = useTranslations("nav");
-  const router = useRouter();
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Detect current locale from pathname
   const segments = pathname.split("/").filter(Boolean);
   const currentLocale = ["en", "pt"].includes(segments[0]) ? segments[0] : "es";
 
@@ -45,11 +35,6 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const switchLocale = (locale: string) => {
-    const newPath = getLocalePath(pathname, locale);
-    router.push(newPath);
-  };
 
   const navLinks = [
     { href: "#services", label: t("services") },
@@ -71,11 +56,11 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#" className="flex items-center select-none">
           <Image
-            src="/Logo-34.png"
+            src="/LOGO_FULL.png"
             alt="SeaJah"
-            height={28}
-            width={112}
-            className="dark:invert"
+            height={36}
+            width={190}
+            className="dark:brightness-0 dark:invert"
             priority
           />
         </a>
@@ -97,9 +82,9 @@ export default function Navbar() {
           <div className="flex items-center gap-1 ml-2">
             {LOCALES.map((loc, i) => (
               <span key={loc.code} className="flex items-center">
-                <button
-                  onClick={() => switchLocale(loc.code)}
-                  className={`text-xs font-semibold px-1 py-0.5 rounded transition-colors ${
+                <a
+                  href={getLocalePath(pathname, loc.code)}
+                  className={`text-xs font-semibold px-1 py-0.5 rounded transition-colors cursor-pointer ${
                     currentLocale === loc.code
                       ? "text-[#2DD4BF]"
                       : "text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
@@ -107,7 +92,7 @@ export default function Navbar() {
                   style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
                 >
                   {loc.label}
-                </button>
+                </a>
                 {i < LOCALES.length - 1 && (
                   <span className="text-gray-200 dark:text-gray-700 text-xs">|</span>
                 )}
@@ -130,7 +115,7 @@ export default function Navbar() {
         <div className="md:hidden flex items-center gap-2">
           <ThemeToggle />
           <button
-            className="p-2 text-gray-600 dark:text-gray-400"
+            className="p-2 text-gray-600 dark:text-gray-400 cursor-pointer"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menu"
           >
@@ -160,20 +145,18 @@ export default function Navbar() {
             ))}
             <div className="flex items-center gap-2 pt-1">
               {LOCALES.map((loc) => (
-                <button
+                <a
                   key={loc.code}
-                  onClick={() => {
-                    switchLocale(loc.code);
-                    setMobileOpen(false);
-                  }}
-                  className={`text-xs font-semibold px-2 py-1 rounded border ${
+                  href={getLocalePath(pathname, loc.code)}
+                  onClick={() => setMobileOpen(false)}
+                  className={`text-xs font-semibold px-2 py-1 rounded border cursor-pointer ${
                     currentLocale === loc.code
                       ? "border-[#2DD4BF] text-[#2DD4BF]"
                       : "border-gray-200 dark:border-[#262626] text-gray-400"
                   }`}
                 >
                   {loc.label}
-                </button>
+                </a>
               ))}
             </div>
             <a
