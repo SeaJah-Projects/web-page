@@ -1,5 +1,4 @@
-import { redirect } from "next/navigation";
-
+// Handled by next-intl middleware — this route is never reached directly
 export default function RootPage() {
-  redirect("/");
+  return null;
 }
