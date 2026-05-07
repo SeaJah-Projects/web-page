@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   description:
     "We build world-class software and scale your team with senior talent. Staff augmentation, software development, UX/UI design, and AI consulting.",
   icons: {
-    icon: "/Logo-34.png",
-    apple: "/Logo-34.png",
+    icon: "/Icono.png",
+    apple: "/Icono.png",
   },
 };
 

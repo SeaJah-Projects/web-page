@@ -2,8 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useState, useEffect, useRef } from "react";
+import { Bars3Icon, XMarkIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
 
@@ -25,7 +25,9 @@ export default function Navbar() {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const langRef = useRef<HTMLDivElement>(null);
 
   const segments = pathname.split("/").filter(Boolean);
   const currentLocale = ["en", "pt"].includes(segments[0]) ? segments[0] : "es";
@@ -34,6 +36,16 @@ export default function Navbar() {
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const navLinks = [
@@ -60,7 +72,6 @@ export default function Navbar() {
             alt="SeaJah"
             height={36}
             width={190}
-            className="dark:brightness-0 dark:invert"
             priority
           />
         </a>
@@ -78,26 +89,35 @@ export default function Navbar() {
             </a>
           ))}
 
-          {/* Language switcher */}
-          <div className="flex items-center gap-1 ml-2">
-            {LOCALES.map((loc, i) => (
-              <span key={loc.code} className="flex items-center">
-                <a
-                  href={getLocalePath(pathname, loc.code)}
-                  className={`text-xs font-semibold px-1 py-0.5 rounded transition-colors cursor-pointer ${
-                    currentLocale === loc.code
-                      ? "text-[#2DD4BF]"
-                      : "text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
-                  }`}
-                  style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
-                >
-                  {loc.label}
-                </a>
-                {i < LOCALES.length - 1 && (
-                  <span className="text-gray-200 dark:text-gray-700 text-xs">|</span>
-                )}
-              </span>
-            ))}
+          {/* Language dropdown */}
+          <div className="relative" ref={langRef}>
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              className="flex items-center gap-1.5 text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-[#0A0A0A] dark:hover:text-white transition-colors cursor-pointer"
+              style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
+            >
+              <GlobeAltIcon className="w-4 h-4" />
+              {currentLocale.toUpperCase()}
+            </button>
+            {langOpen && (
+              <div className="absolute right-0 top-full mt-2 w-20 bg-white dark:bg-[#1A1A1A] rounded-xl shadow-lg border border-gray-100 dark:border-[#262626] overflow-hidden z-50">
+                {LOCALES.map((loc) => (
+                  <a
+                    key={loc.code}
+                    href={getLocalePath(pathname, loc.code)}
+                    onClick={() => setLangOpen(false)}
+                    className={`block px-4 py-2.5 text-sm font-semibold text-center transition-colors ${
+                      currentLocale === loc.code
+                        ? "text-[#2DD4BF] bg-teal-50 dark:bg-teal-950/30"
+                        : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#262626]"
+                    }`}
+                    style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
+                  >
+                    {loc.label}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
 
           <ThemeToggle />
