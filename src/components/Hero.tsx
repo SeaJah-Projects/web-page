@@ -116,10 +116,10 @@ export default function Hero() {
               {/* Center icon */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <Image
-                  src="/Icono.png"
+                  src="/Icono-Transparente.png"
                   alt="SeaJah"
-                  width={96}
-                  height={96}
+                  width={100}
+                  height={100}
                   className="drop-shadow-lg"
                 />
               </div>

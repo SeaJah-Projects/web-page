@@ -10,22 +10,12 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
 
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            {/* Icono-Transparente only in light mode */}
-            <Image
-              src="/Icono-Transparente.png"
-              alt=""
-              width={36}
-              height={36}
-              className="block dark:hidden invert"
-            />
-            <Image
-              src="/Seajah black-Photoroom.png"
-              alt="SeaJah"
-              height={28}
-              width={140}
-            />
-          </div>
+          <Image
+            src="/Seajah black-Photoroom.png"
+            alt="SeaJah"
+            height={28}
+            width={140}
+          />
 
           {/* Tagline */}
           <p
