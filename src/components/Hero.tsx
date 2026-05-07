@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -112,26 +113,15 @@ export default function Hero() {
                 className="absolute inset-12 rounded-full border-4"
                 style={{ borderColor: "#2DD4BF" }}
               />
-              {/* Center dot */}
-              <div
-                className="absolute inset-0 flex items-center justify-center"
-              >
-                <div
-                  className="w-20 h-20 rounded-full flex items-center justify-center"
-                  style={{ background: "#2DD4BF" }}
-                >
-                  <span
-                    style={{
-                      fontFamily: "var(--font-barlow-condensed)",
-                      fontWeight: 900,
-                      fontSize: "1.1rem",
-                      color: "white",
-                      letterSpacing: "0.05em",
-                    }}
-                  >
-                    SJ
-                  </span>
-                </div>
+              {/* Center icon */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Image
+                  src="/Icono.png"
+                  alt="SeaJah"
+                  width={96}
+                  height={96}
+                  className="drop-shadow-lg"
+                />
               </div>
 
               {/* Floating chips */}

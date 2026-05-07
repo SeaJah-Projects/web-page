@@ -8,14 +8,24 @@ export default function Footer() {
     <footer className="bg-[#0A0A0A] dark:bg-[#080808] py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+
           {/* Logo */}
-          <Image
-            src="/Logo-34.png"
-            alt="SeaJah"
-            height={26}
-            width={104}
-            className="invert"
-          />
+          <div className="flex items-center gap-3">
+            {/* Icono-Transparente only in light mode */}
+            <Image
+              src="/Icono-Transparente.png"
+              alt=""
+              width={36}
+              height={36}
+              className="block dark:hidden invert"
+            />
+            <Image
+              src="/Seajah black-Photoroom.png"
+              alt="SeaJah"
+              height={28}
+              width={140}
+            />
+          </div>
 
           {/* Tagline */}
           <p
