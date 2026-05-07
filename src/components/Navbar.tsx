@@ -66,7 +66,16 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center select-none">
+        <a href="#" className="flex items-center gap-2 select-none">
+          {/* Light mode: icon + wordmark */}
+          <Image
+            src="/Icono-Transparente.png"
+            alt=""
+            width={32}
+            height={32}
+            priority
+            className="dark:hidden"
+          />
           <Image
             src="/Logo-34-Photoroom.png"
             alt="SeaJah"
@@ -75,6 +84,7 @@ export default function Navbar() {
             priority
             className="dark:hidden"
           />
+          {/* Dark mode: wordmark only */}
           <Image
             src="/Seajah black-Photoroom.png"
             alt="SeaJah"
